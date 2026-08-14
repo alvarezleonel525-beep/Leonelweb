@@ -1,0 +1,91 @@
+
+
+<style>
+.redes a {
+    animation: subir 0.8s ease both;
+}
+
+.redes a:nth-child(2) {
+    animation-delay: 0.2s;
+}
+
+.redes a:nth-child(3) {
+    animation-delay: 0.4s;
+}
+
+.redes a:nth-child(4) {
+    animation-delay: 0.6s;
+}
+
+.redes a:hover {
+    transform: scale(1.08) translateY(-5px);
+    box-shadow: 0 0 25px rgba(255,255,255,0.5);
+}
+
+@keyframes subir {
+    from {
+        opacity: 0;
+        transform: translateY(50px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+</style>
+<head>
+    <link rel="stylesheet" href="/static/style.css">
+</head>
+
+<body>
+
+<div class="comunidad">
+    <div class="comunidad-icono">👥</div>
+
+    <h2>TOTAL DE LA COMUNIDAD</h2>
+
+    <div class="contador" id="totalSeguidores">0</div>
+
+    <p>Seguidores en todas mis redes</p>
+</div>
+
+<style>
+.comunidad {
+    width: 85%;
+    max-width: 420px;
+    margin: 50px auto;
+    padding: 30px 20px;
+    text-align: center;
+    border-radius: 20px;
+    background: rgba(255, 255, 255, 0.06);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    box-shadow: 0 0 30px rgba(255, 255, 255, 0.12);
+    backdrop-filter: blur(10px);
+}
+
+.comunidad-icono {
+    font-size: 40px;
+    margin-bottom: 10px;
+}
+
+.comunidad h2 {
+    font-size: 18px;
+    letter-spacing: 2px;
+    margin: 5px 0 15px;
+}
+
+.contador {
+    font-size: 48px;
+    font-weight: bold;
+    margin: 10px 0;
+}
+
+.comunidad p {
+    opacity: 0.7;
+    margin: 0;
+}
+</style>
+
+</body>
+</html>

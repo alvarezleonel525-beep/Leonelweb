@@ -1,0 +1,242 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Leonel | Streamer de Free Fire</title>
+
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+
+<body>
+
+    <!-- NAVBAR -->
+    <nav class="navbar">
+        <div class="nav-logo">LEONEL</div>
+
+        <div class="nav-links">
+            <a href="#inicio">Inicio</a>
+            <a href="#sobre-mi">Sobre mí</a>
+            <a href="#streams">Streams</a>
+        </div>
+
+        <a class="nav-kick" href="https://kick.com/leonell-06" target="_blank">
+            🔴 SEGUIME EN KICK
+        </a>
+    </nav>
+
+
+    <!-- HERO -->
+    <section id="inicio" class="hero">
+
+        <div class="hero-background"></div>
+
+        <div class="hero-content">
+
+            <div class="logo-container">
+                <img src="{{ url_for('static', filename='logo.png') }}"
+                     alt="Logo LA de Leonel">
+            </div>
+
+
+            <h1>LEONEL</h1>
+
+            <h2><span> STREAMER - CREADOR DE CONTENIDO</span>
+
+            <p class="hero-text">
+                Bienvenido a mi página oficial.
+                Acá vas a encontrar mis streams,
+                redes sociales y todo mi contenido.
+            </p>
+             <!-- TOTAL DE LA COMUNIDAD -->
+             <div class="comunidad">
+                  <div class="comunidad-icono">👥</div>
+
+                  <h3>TOTAL DE LA COMUNIDAD</h3>
+
+                  <div class="contador" id="totalSeguidores">0</div>
+
+                  <p>Seguidores en todas mis redes</p>
+          </div>
+
+           <div class="scroll">
+                <span>DESLIZÁ PARA DESCUBRIR</span>
+                <div>↓</div>
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- SOBRE MI -->
+    <section id="sobre-mi" class="section">
+
+        <div class="about-card">
+
+            <div class="about-logo">
+                <img src="{{ url_for('static', filename='logo.png') }}"
+                     alt="Logo Leonel">
+            </div>
+
+            <div class="about-text">
+
+                <p class="section-label">01 / SOBRE MÍ</p>
+
+                <h2>¿QUIÉN ES <span>LEONEL</span>?</h2>
+
+                <p>
+                    Soy Leonel, streamer y creador de contenido.
+                    Me gusta Free Fire, los videojuegos y compartir
+                    momentos con la comunidad.
+                </p>
+
+                <div class="stats">
+
+                    <div>
+                        <strong>🎮</strong>
+                        <span>Free Fire</span>
+                    </div>
+
+                    <div>
+                        <strong>🎥</strong>
+                        <span>Streamer</span>
+                    </div>
+
+                    <div>
+                        <strong>⚡</strong>
+                        <span>Gaming</span>
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- STREAMS -->
+    <section id="streams" class="section streams-section">
+
+        <p class="section-label center">02 / CONTENIDO</p>
+
+        <h2 class="section-title">
+            ÚLTIMOS <span>STREAMS</span>
+        </h2>
+
+        <div class="stream-grid">
+
+            <article class="stream-card">
+                <div class="stream-image image-one">
+                    <span>FREE FIRE</span>
+                </div>
+
+                <div class="stream-info">
+                    <h3>CLASIFICATORIA ÉPICA 🔥</h3>
+                    <p>Jugando Free Fire con la comunidad.</p>
+                    <span class="date">🎥 STREAM</span>
+                </div>
+            </article>
+
+
+            <article class="stream-card">
+                <div class="stream-image image-two">
+                    <span>HIGHLIGHTS</span>
+                </div>
+
+                <div class="stream-info">
+                    <h3>MEJORES MOMENTOS ⚡</h3>
+                    <p>Los mejores momentos de los streams.</p>
+                    <span class="date">🎬 HIGHLIGHTS</span>
+                </div>
+            </article>
+
+
+            <article class="stream-card">
+                <div class="stream-image image-three">
+                    <span>CON SUBS</span>
+                </div>
+
+                <div class="stream-info">
+                    <h3>JUGANDO CON LA COMUNIDAD 🎮</h3>
+                    <p>Partidas junto a la comunidad.</p>
+                    <span class="date">🎥 STREAM</span>
+                </div>
+            </article>
+
+        </div>
+
+        <a class="all-streams"
+           href="https://kick.com/leonell-06"
+           target="_blank">
+            VER TODOS LOS STREAMS →
+        </a>
+
+    </section>
+
+
+
+    <!-- FOOTER -->
+    <footer>
+
+        <div class="footer-logo">
+            <img src="{{ url_for('static', filename='logo.png') }}"
+                 alt="Leonel">
+            <h3>LEONEL</h3>
+            <p>STREAMER DE FREE FIRE</p>
+        </div>
+
+        <div class="footer-links">
+            <h4>ENLACES</h4>
+            <a href="#inicio">Inicio</a>
+            <a href="#sobre-mi">Sobre mí</a>
+            <a href="#streams">Streams</a>
+            <a href="#redes">Redes</a>
+        </div>
+
+        <div class="footer-links">
+            <h4>SÍGUEME</h4>
+            <a href="https://kick.com/leonell-06" target="_blank">Kick</a>
+            <a href="https://www.tiktok.com/@leonell_06" target="_blank">TikTok</a>
+            <a href="https://www.instagram.com/leonel__06__" target="_blank">Instagram</a>
+        </div>
+
+        <div class="footer-links">
+            <h4>CONTACTO</h4>
+            <p>🇦🇷 alvarezleonel525@gmail.com</p>
+            
+        </div>
+
+        <div class="copyright">
+            © 2026 LEONEL — Todos los derechos reservados.
+        </div>
+
+    </footer>
+<div class="redes">
+    <h2>Mis redes</h2>
+
+    <a class="red-social instagram"
+       href="https://www.instagram.com/leonel__06__/"
+       target="_blank">
+        <img src="/static/icons/instagram.svg" alt="Instagram">
+        <span>Instagram</span>
+    </a>
+
+    <a class="red-social tiktok"
+       href="https://www.tiktok.com/@leonell_06"
+       target="_blank">
+        <img src="/static/icons/tiktok.svg" alt="TikTok">
+        <span>TikTok</span>
+    </a>
+
+    <a class="red-social kick"
+       href="https://kick.com/leonell-06"
+       target="_blank">
+        <img src="/static/icons/kick.svg" alt="Kick">
+        <span>Kick</span>
+    </a>
+</div>
+
