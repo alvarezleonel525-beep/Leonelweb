@@ -33,7 +33,6 @@ def inicio():
 @app.route("/login/kick")
 def login_kick():
     state = secrets.token_urlsafe(32)
-
     code_verifier = secrets.token_urlsafe(64)
     code_challenge = create_code_challenge(code_verifier)
 
@@ -76,10 +75,9 @@ def callback():
         data={
             "grant_type": "authorization_code",
             "client_id": CLIENT_ID,
-            "client_secret": CLIENT_SECRET,
             "redirect_uri": REDIRECT_URI,
-            "code_verifier": code_verifier,
-            "code": code
+            "code": code,
+            "code_verifier": code_verifier
         },
         timeout=15
     )
