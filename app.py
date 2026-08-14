@@ -97,6 +97,12 @@ def callback():
 
     return "¡Kick conectado correctamente! 🚀"
 
+@app.route("/webhook/kick", methods=["POST"])
+def kick_webhook():
+    data = request.get_json(silent=True)
+    print("KICK WEBHOOK:", data)
+    return "", 200
+
 
 if __name__ == "__main__":
     app.run(
