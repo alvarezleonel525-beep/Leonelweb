@@ -8,11 +8,50 @@
 
     <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
 </head>
+<script>
+const menuToggle = document.getElementById("menuToggle");
+const navLinks = document.getElementById("navLinks");
 
+menuToggle.addEventListener("click", () => {
+    navLinks.classList.toggle("active");
+});
+
+document.querySelectorAll(".nav-links a").forEach(link => {
+    link.addEventListener("click", () => {
+        navLinks.classList.remove("active");
+    });
+});
+</script>
 <body>
 
     <!-- NAVBAR -->
     <nav class="navbar">
+
+    <div class="nav-logo">LEONEL</div>
+
+    <button class="menu-toggle" id="menuToggle">
+        ☰
+    </button>
+
+    <div class="nav-links" id="navLinks">
+
+        <a href="#inicio">🏠 Inicio</a>
+
+        <a href="#sobre-mi">👤 Sobre mí</a>
+
+        <a href="#streams">🎮 Streams</a>
+
+        <a href="#redes">🔗 Redes</a>
+
+    </div>
+
+    <a class="nav-kick"
+       href="https://kick.com/leonell-06"
+       target="_blank">
+        🔴 SEGUIME EN KICK
+    </a>
+
+</nav>
         <div class="nav-logo">LEONEL</div>
 
         <div class="nav-links">

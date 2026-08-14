@@ -1416,3 +1416,61 @@ body {
     overflow-y: auto;
     min-height: 100vh;
 }
+/* ================================
+   MENÚ MÓVIL
+   ================================ */
+
+.menu-toggle {
+    display: none;
+    background: transparent;
+    border: none;
+    color: inherit;
+    font-size: 30px;
+    cursor: pointer;
+    padding: 5px;
+}
+
+@media (max-width: 700px) {
+
+    .navbar {
+        position: relative;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding: 15px 18px;
+    }
+
+    .menu-toggle {
+        display: block;
+        order: 2;
+    }
+
+    .nav-kick {
+        display: none;
+    }
+
+    .nav-links {
+        display: none;
+        position: absolute;
+        top: 100%;
+        left: 0;
+        width: 100%;
+        flex-direction: column;
+        gap: 0;
+        padding: 10px 0;
+        z-index: 1000;
+        box-sizing: border-box;
+    }
+
+    .nav-links.active {
+        display: flex;
+    }
+
+    .nav-links a {
+        width: 100%;
+        box-sizing: border-box;
+        padding: 16px 20px;
+        text-align: center;
+    }
+
+}
