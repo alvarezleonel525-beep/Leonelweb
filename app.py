@@ -43,7 +43,7 @@ def login_kick():
         "response_type": "code",
         "client_id": CLIENT_ID,
         "redirect_uri": REDIRECT_URI,
-        "scope": "channel:read",
+        "scope": "user:read",
         "code_challenge": code_challenge,
         "code_challenge_method": "S256",
         "state": state
