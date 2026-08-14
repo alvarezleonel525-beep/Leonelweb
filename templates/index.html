@@ -72,7 +72,25 @@
                   <h3>TOTAL DE LA COMUNIDAD</h3>
 
                   <div class="contador" id="totalSeguidores">0</div>
+    <script>
+async function actualizarSeguidores() {
+    try {
+        const respuesta = await fetch("/api/seguidores");
+        const datos = await respuesta.json();
 
+        if (datos.conectado) {
+            document.getElementById("totalSeguidores").textContent =
+                Number(datos.seguidores).toLocaleString("es-AR");
+        }
+    } catch (error) {
+        console.log("Error obteniendo seguidores:", error);
+    }
+}
+
+actualizarSeguidores();
+
+setInterval(actualizarSeguidores, 60000);
+</script>
                   <p>Seguidores en todas mis redes</p>
           </div>
 
