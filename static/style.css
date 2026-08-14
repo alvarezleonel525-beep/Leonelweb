@@ -1406,3 +1406,13 @@ p {
         margin: 20px 0;
     }
 }
+html {
+    scroll-behavior: smooth;
+    overflow-y: auto;
+}
+
+body {
+    overflow-x: hidden;
+    overflow-y: auto;
+    min-height: 100vh;
+}
