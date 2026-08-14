@@ -18,7 +18,7 @@ CLIENT_ID = os.environ.get("KICK_CLIENT_ID")
 CLIENT_SECRET = os.environ.get("KICK_CLIENT_SECRET")
 
 REDIRECT_URI = "https://leonelweb-1.onrender.com/callback"
-
+kick_access_token = None
 
 def create_code_challenge(verifier):
     digest = hashlib.sha256(verifier.encode()).digest()
@@ -43,7 +43,7 @@ def login_kick():
         "response_type": "code",
         "client_id": CLIENT_ID,
         "redirect_uri": REDIRECT_URI,
-        "scope": "user:read",
+        "scope": "user:read events:subscribe",
         "code_challenge": code_challenge,
         "code_challenge_method": "S256",
         "state": state
@@ -95,8 +95,17 @@ def callback():
             + token_response.text
         ), 400
 
-    return "¡Kick conectado correctamente! 🚀"
+    global kick_access_token
 
+    token_data = token_response.json()
+    kick_access_token = token_data.get("access_token")
+
+    if not kick_access_token:
+        return "Kick no devolvió un access token.", 400
+
+    print("KICK TOKEN RECIBIDO CORRECTAMENTE")
+
+    return "¡Kick conectado correctamente! 🚀"
 @app.route("/webhook/kick", methods=["POST"])
 def kick_webhook():
     data = request.get_json(silent=True)
