@@ -1,63 +1,39 @@
 <!DOCTYPE html>
 <html lang="es">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
     <title>Leonel | Streamer de Free Fire</title>
 
-    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+    <link rel="stylesheet"
+          href="{{ url_for('static', filename='style.css') }}">
 </head>
-<script>
-const menuToggle = document.getElementById("menuToggle");
-const navLinks = document.getElementById("navLinks");
 
-menuToggle.addEventListener("click", () => {
-    navLinks.classList.toggle("active");
-});
-
-document.querySelectorAll(".nav-links a").forEach(link => {
-    link.addEventListener("click", () => {
-        navLinks.classList.remove("active");
-    });
-});
-</script>
 <body>
 
     <!-- NAVBAR -->
     <nav class="navbar">
 
-    <div class="nav-logo">LEONEL</div>
-
-    <button class="menu-toggle" id="menuToggle">
-        ☰
-    </button>
-
-    <div class="nav-links" id="navLinks">
-
-        <a href="#inicio">🏠 Inicio</a>
-
-        <a href="#sobre-mi">👤 Sobre mí</a>
-
-        <a href="#streams">🎮 Streams</a>
-
-        <a href="#redes">🔗 Redes</a>
-
-    </div>
-
-    <a class="nav-kick"
-       href="https://kick.com/leonell-06"
-       target="_blank">
-        🔴 SEGUIME EN KICK
-    </a>
-
-</nav>
         <div class="nav-logo">LEONEL</div>
 
-        <div class="nav-links">
-            <a href="#inicio">Inicio</a>
-            <a href="#sobre-mi">Sobre mí</a>
-            <a href="#streams">Streams</a>
+        <button class="menu-toggle"
+                id="menuToggle"
+                type="button">
+            ☰
+        </button>
+
+        <div class="nav-links" id="navLinks">
+
+            <a href="#inicio">🏠 Inicio</a>
+
+            <a href="#sobre-mi">👤 Sobre mí</a>
+
+            <a href="#streams">🎮 Streams</a>
+
+            <a href="#redes">🔗 Redes</a>
+
         </div>
 
         <a class="nav-kick"
@@ -65,6 +41,7 @@ document.querySelectorAll(".nav-links a").forEach(link => {
            target="_blank">
             🔴 SEGUIME EN KICK
         </a>
+
     </nav>
 
 
@@ -76,8 +53,10 @@ document.querySelectorAll(".nav-links a").forEach(link => {
         <div class="hero-content">
 
             <div class="logo-container">
+
                 <img src="{{ url_for('static', filename='logo.png') }}"
                      alt="Logo de Leonel">
+
             </div>
 
             <h1>LEONEL</h1>
@@ -98,8 +77,11 @@ document.querySelectorAll(".nav-links a").forEach(link => {
             </a>
 
             <div class="scroll">
+
                 <span>DESLIZÁ PARA DESCUBRIR</span>
+
                 <div>↓</div>
+
             </div>
 
         </div>
@@ -113,15 +95,21 @@ document.querySelectorAll(".nav-links a").forEach(link => {
         <div class="about-card">
 
             <div class="about-logo">
+
                 <img src="{{ url_for('static', filename='logo.png') }}"
                      alt="Logo Leonel">
+
             </div>
 
             <div class="about-text">
 
-                <p class="section-label">01 / SOBRE MÍ</p>
+                <p class="section-label">
+                    01 / SOBRE MÍ
+                </p>
 
-                <h2>¿QUIÉN ES <span>LEONEL</span>?</h2>
+                <h2>
+                    ¿QUIÉN ES <span>LEONEL</span>?
+                </h2>
 
                 <p>
                     Soy Leonel, streamer y creador de contenido.
@@ -156,7 +144,8 @@ document.querySelectorAll(".nav-links a").forEach(link => {
 
 
     <!-- STREAMS -->
-    <section id="streams" class="section streams-section">
+    <section id="streams"
+             class="section streams-section">
 
         <p class="section-label center">
             02 / CONTENIDO
@@ -175,11 +164,19 @@ document.querySelectorAll(".nav-links a").forEach(link => {
                 </div>
 
                 <div class="stream-info">
-                    <h3>CLASIFICATORIA ÉPICA 🔥</h3>
+
+                    <h3>
+                        CLASIFICATORIA ÉPICA 🔥
+                    </h3>
+
                     <p>
                         Jugando Free Fire con la comunidad.
                     </p>
-                    <span class="date">🎥 STREAM</span>
+
+                    <span class="date">
+                        🎥 STREAM
+                    </span>
+
                 </div>
 
             </article>
@@ -192,11 +189,19 @@ document.querySelectorAll(".nav-links a").forEach(link => {
                 </div>
 
                 <div class="stream-info">
-                    <h3>MEJORES MOMENTOS ⚡</h3>
+
+                    <h3>
+                        MEJORES MOMENTOS ⚡
+                    </h3>
+
                     <p>
                         Los mejores momentos de los streams.
                     </p>
-                    <span class="date">🎬 HIGHLIGHTS</span>
+
+                    <span class="date">
+                        🎬 HIGHLIGHTS
+                    </span>
+
                 </div>
 
             </article>
@@ -209,30 +214,45 @@ document.querySelectorAll(".nav-links a").forEach(link => {
                 </div>
 
                 <div class="stream-info">
-                    <h3>JUGANDO CON LA COMUNIDAD 🎮</h3>
+
+                    <h3>
+                        JUGANDO CON LA COMUNIDAD 🎮
+                    </h3>
+
                     <p>
                         Partidas junto a la comunidad.
                     </p>
-                    <span class="date">🎥 STREAM</span>
+
+                    <span class="date">
+                        🎥 STREAM
+                    </span>
+
                 </div>
 
             </article>
 
         </div>
 
+
         <a class="all-streams"
            href="https://kick.com/leonell-06"
            target="_blank">
+
             VER TODOS LOS STREAMS →
+
         </a>
 
     </section>
 
 
     <!-- REDES -->
-    <section id="redes" class="redes">
+    <section id="redes"
+             class="redes">
 
-        <h2>Mis redes</h2>
+        <h2>
+            MIS REDES
+        </h2>
+
 
         <a class="red-social instagram"
            href="https://www.instagram.com/leonel__06__/"
@@ -241,7 +261,9 @@ document.querySelectorAll(".nav-links a").forEach(link => {
             <img src="{{ url_for('static', filename='icons/instagram.svg') }}"
                  alt="Instagram">
 
-            <span>Instagram</span>
+            <span>
+                Instagram
+            </span>
 
         </a>
 
@@ -253,7 +275,9 @@ document.querySelectorAll(".nav-links a").forEach(link => {
             <img src="{{ url_for('static', filename='icons/tiktok.svg') }}"
                  alt="TikTok">
 
-            <span>TikTok</span>
+            <span>
+                TikTok
+            </span>
 
         </a>
 
@@ -265,7 +289,9 @@ document.querySelectorAll(".nav-links a").forEach(link => {
             <img src="{{ url_for('static', filename='icons/kick.svg') }}"
                  alt="Kick">
 
-            <span>Kick</span>
+            <span>
+                Kick
+            </span>
 
         </a>
 
@@ -280,28 +306,47 @@ document.querySelectorAll(".nav-links a").forEach(link => {
             <img src="{{ url_for('static', filename='logo.png') }}"
                  alt="Leonel">
 
-            <h3>LEONEL</h3>
+            <h3>
+                LEONEL
+            </h3>
 
-            <p>STREAMER DE FREE FIRE</p>
-
-        </div>
-
-
-        <div class="footer-links">
-
-            <h4>ENLACES</h4>
-
-            <a href="#inicio">Inicio</a>
-            <a href="#sobre-mi">Sobre mí</a>
-            <a href="#streams">Streams</a>
-            <a href="#redes">Redes</a>
+            <p>
+                STREAMER DE FREE FIRE
+            </p>
 
         </div>
 
 
         <div class="footer-links">
 
-            <h4>SÍGUEME</h4>
+            <h4>
+                ENLACES
+            </h4>
+
+            <a href="#inicio">
+                Inicio
+            </a>
+
+            <a href="#sobre-mi">
+                Sobre mí
+            </a>
+
+            <a href="#streams">
+                Streams
+            </a>
+
+            <a href="#redes">
+                Redes
+            </a>
+
+        </div>
+
+
+        <div class="footer-links">
+
+            <h4>
+                SÍGUEME
+            </h4>
 
             <a href="https://kick.com/leonell-06"
                target="_blank">
@@ -323,7 +368,9 @@ document.querySelectorAll(".nav-links a").forEach(link => {
 
         <div class="footer-links">
 
-            <h4>CONTACTO</h4>
+            <h4>
+                CONTACTO
+            </h4>
 
             <p>
                 🇦🇷 alvarezleonel525@gmail.com
@@ -333,10 +380,45 @@ document.querySelectorAll(".nav-links a").forEach(link => {
 
 
         <div class="copyright">
+
             © 2026 LEONEL — Todos los derechos reservados.
+
         </div>
 
     </footer>
 
+
+    <!-- MENU MOBILE -->
+    <script>
+
+        const menuToggle =
+            document.getElementById("menuToggle");
+
+        const navLinks =
+            document.getElementById("navLinks");
+
+
+        menuToggle.addEventListener("click", () => {
+
+            navLinks.classList.toggle("active");
+
+        });
+
+
+        document
+            .querySelectorAll(".nav-links a")
+            .forEach(link => {
+
+                link.addEventListener("click", () => {
+
+                    navLinks.classList.remove("active");
+
+                });
+
+            });
+
+    </script>
+
 </body>
+
 </html>
