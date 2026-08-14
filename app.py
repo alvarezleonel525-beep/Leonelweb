@@ -88,10 +88,16 @@ def callback():
     )
 
     if token_response.status_code != 200:
-        return (
-            "Kick rechazó la autorización.<br><br>"
-            + token_response.text
-        ), 400
+    print("KICK TOKEN ERROR:", token_response.status_code)
+    print("KICK RESPONSE:", token_response.text)
+
+    return (
+        "Kick rechazó la autorización.<br><br>"
+        "Código de error: "
+        + str(token_response.status_code)
+        + "<br><br>"
+        + token_response.text
+    ), 400
 
     return "¡Kick conectado correctamente! 🚀"
 
