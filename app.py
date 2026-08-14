@@ -75,6 +75,7 @@ def callback():
         data={
             "grant_type": "authorization_code",
             "client_id": CLIENT_ID,
+            "client_secret": CLIENT_SECRET,
             "redirect_uri": REDIRECT_URI,
             "code": code,
             "code_verifier": code_verifier
